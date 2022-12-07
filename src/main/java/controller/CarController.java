@@ -1,4 +1,4 @@
-package web.controller;
+package controller;
 
 
 import model.Car;
@@ -15,18 +15,17 @@ import java.util.List;
 @Controller
 @ComponentScan("service")
 public class CarController {
-    @Autowired
-    CarServiceImpl carService;
 
+    private CarServiceImpl carService;
+
+    @Autowired
     public CarController(CarServiceImpl carService) {
         this.carService = carService;
     }
 
     @GetMapping("/cars")
-
     public String getCars(@RequestParam(value = "count", required = false) int count, ModelMap model) {
-
-        List<Car> carList  = carService.getCars(count);
+        List<Car> carList = carService.getCars(count);
         model.addAttribute("cars", carList);
         return "cars";
     }

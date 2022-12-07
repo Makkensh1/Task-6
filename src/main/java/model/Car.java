@@ -1,9 +1,9 @@
 package model;
 
 public class Car {
-    int series;
-    String model;
-    int mileage;
+    private int series;
+    private String model;
+    private int mileage;
 
     public Car(int series, String model, int mileage) {
         this.series = series;

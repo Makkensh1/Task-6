@@ -22,11 +22,10 @@
         </tr>
 
 
-        <tr th:each = "car : ${cars}">
-
-            <td th:text="${car.getSeries()}"></td>
-            <td th:text="${car.getModel()}"></td>
-            <td th:text="${car.getMileage()}"></td>
+        <tr th:each = "cara:${cars}">
+            <td th:text="${cara.getSeries()}"></td>
+            <td th:text="${cara.getModel()}"></td>
+            <td th:text="${cara.getMileage()}"></td>
         </tr>
     </table>
 </div>
